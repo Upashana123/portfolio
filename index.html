@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <title> My personal Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/670cef3bf8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+        <div id="header">
+            <div class="navbar">
+                <nav>
+                    <ul id="sidemenu">
+                        <li><a href="#home"> Home </a></li>
+                        <li><a href="#about"> About</a></li>
+                        <li><a href="#Project"> Projects</a></li>
+                        <li><a href="#Portfolio"> Resume</a></li>
+                        <li><a href="#contact"> Contact</a></li>
+                        
+                </nav>
+                <div class="header-text">
+                    <h1>Hello Everyone!! I am <span>Upashana Chatterjee</span> from Kolkata
+                </div>
+            </div>
+            
+                <div id="about"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="my.jpg" alt="Upa" width="700" height="800">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title"> <span>About Me</span></h1>
+                            <p> I have an interest in  Cloud Computing.<br> My hobbies are Singing, Travelling and
+                                Social work.</p>
+                            <div class="tab-title">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                                <p class="tab-links active-link" onclick="opentab('marks')">Marks Obtain</p>
+                            </div>
+                            <div class="tab-contents active" id="skills">
+                                <ul>
+                                    <li><span>Java</span></li>
+                                    <li><span>AWS</span></li>
+                                    <li><span>Computer OS</span></li>
+                                    <li><span>Web Development</span></li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2022-2024</span><br> MCA(MAKAUT)</li>
+                                    <li><span>2019-2022</span><br>BCA(MAKAUT)</li>
+                                    <li><span>2019</span><br> 12th board(WBHSE)</li>
+                                    <li><span>2017</span><br> 10th board(WBSSE)</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="marks">
+                                <ul>
+                                    <li><span>MCA </span><br>8.44(CGPA)</li>
+                                    <li><span>BCA</span><br>9.55(CGPA)</li>
+                                    <li><span>12th board</span><br>74.8%</li>
+                                    <li><span>10th board</span><br>78.8%</li>
+                                </ul>
+                            </div>
+                        </div>
+                       
+                            <div id="Project"></div>
+                            <div class="container">
+                                <h1 class="sub-title"><span>My Projects</span></h1>
+                                <div class="Project-list">
+                                    <div>
+                                        <h2><span>1.</span>OTP generator</h2>
+                                        <p>Using Web Development tools</p><br>Created a online OTP generator system by
+                                        using HtML5, CSS.
+                                    </div>
+                                    <div>
+                                        <h2><span>2.</span>Cross region Replication using RDS</h2>
+                                        <p>Using RDS components in AWS</p><br>Created a database table using RDS
+                                        components in any region in AWS.<br> Created 3-4 replica of this table in
+                                        different region where we can also access this table in AWS account.
+
+                                    </div>
+                                    <div>
+                                        <h2><span>3.</span>Monitoring dashboard using CloudWatch and CloudTrail</h2>
+                                        <p>Using Cloudwatch component and Cloudtrail component in AWS</p><br>Created a
+                                        dashboard and set a alarm if the CPU's utilization is high
+                                    </div>
+                                    <div>
+                                        <h2><span>4.</span>Keylogger and prevention in online sociual media</h2>
+                                        <p>Cyber security project</p><br>Created a
+                                        keylogger malware and inject in the target machine to show that how it is very easy to use by the attacker.
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    
+                        <div id="Portfolio">
+                            <div class="container">
+                                <h1 class="sub-title"><span>Portfolio</span></h1>
+                                <h2> You can download my CV from here</h2>
+                                <p>Open a PDF file</p>
+                                        <a href="file:///D:/Projects/portfolio/Resume_Upashana.pdf"> For My CV</a></p>
+                            </div>
+                        </div>
+                        
+                            <div id="contact">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="contact-left">
+                                            <h1 class="sub-title"><span>Contact Me</span></h1>
+                                            <p><i class="fa-regular fa-envelope"></i>chatterjeeupashana8@gmail.com</p>
+                                            <p><i class="fa-solid fa-phone"></i>7063577044</p>
+                                            <div class="social-links">
+                                                <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                                                <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+                                                <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                            </div>
+
+                            <script>
+                                var links = document.getElementsByClassName("tab-links");
+                                var contents = document.getElementsByClassName("tab-contents");
+                                function opentab(tabname) {
+                                    for (link of links) {
+                                        link.classList.remove("active-link");
+                                    }
+                                    for (content of contents) {
+                                        content.classList.remove("active");
+                                    }
+                                    event.currentTarget.classList.add("active-link");
+                                    document.getElementById(tabname).classList.add("active");
+                                }
+                            </script>
+                            
+                            
+                            
+</body>
+
+</html>
